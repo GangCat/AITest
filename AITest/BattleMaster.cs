@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
@@ -13,7 +12,7 @@ namespace AITest
 
         const int MAX_TURNS = 10000;
 
-        public IEnumerator Start()
+        public void Start()
         {
             BattleLogger.Initialize(@"D:\AIData\battle_data.csv");
 
@@ -53,7 +52,6 @@ namespace AITest
                     enemy.LastAction = EAction.NONE;
                 }
 
-                yield return null;
             }
 
             Console.WriteLine("1만개 데이터 생성 완료.");
