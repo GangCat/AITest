@@ -4,8 +4,9 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 import os
 
-CSV_PATH = r"D:\AIData\battle_data.csv"   # Unity가 만든 CSV
-MODEL_PATH = r"D:\AIData\model.pkl"       # 학습된 모델 저장 경로
+BASE = os.path.dirname(os.path.abspath(__file__))
+CSV_PATH = os.path.join(BASE, "..", "AIData", "battle_data.csv")
+MODEL_PATH = os.path.join(BASE, "..", "AIData", "model.pkl")
 
 def main():
     if not os.path.exists(CSV_PATH):

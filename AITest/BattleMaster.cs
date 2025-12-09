@@ -26,7 +26,7 @@ namespace AITest
 
         public void Start()
         {
-            BattleLogger.Initialize(@"D:\AIData\battle_data.csv");
+            BattleLogger.Initialize(@"..\..\..\AIData\battle_data.csv");
 
             player.HP = 100;
             enemy.HP = 100;

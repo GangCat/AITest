@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 import joblib
 import numpy as np
+import os
 
-MODEL_PATH = r"D:\AIData\model.pkl"
+BASE = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE, "..", "AIData", "model.pkl")
 
 # 모델 로드
 model = joblib.load(MODEL_PATH)
