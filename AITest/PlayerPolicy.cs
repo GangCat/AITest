@@ -6,6 +6,8 @@ namespace AITest
 {
     internal class PlayerPolicy
     {
+        private static readonly Random random = new Random();
+
         public static EAction DecideNextAction(float pHP, float eHP, EAction pLA, EAction eLA)
         {
             float pA = 0.33f;
@@ -39,8 +41,6 @@ namespace AITest
             pA /= sum;
             pC /= sum;
             pH /= sum;
-
-            var random = new Random();
 
             float r = random.NextSingle();
 
