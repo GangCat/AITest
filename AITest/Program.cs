@@ -2,10 +2,11 @@
 {
     internal class Program
     {
-        static void Main(string[] _args)
+        static async Task Main(string[] _args)
         {
             BattleMaster battleMaster = new BattleMaster();
-            battleMaster.Start();
+            //battleMaster.Start();
+            await battleMaster.StartReal();
         }
     }
 }

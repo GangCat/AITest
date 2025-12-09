@@ -6,7 +6,7 @@ namespace AITest
 {
     internal class Fighter
     {
-        public float HP = 100f;
+        public int HP = 100;
         public EAction LastAction = EAction.NONE; // Attack=0, Counter=1, Heal=2
     }
 
